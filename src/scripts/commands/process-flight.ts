@@ -18,14 +18,17 @@ import { processFlightData } from "../../domain/flight/process";
 import * as fs from "node:fs/promises";
 
 // 스키마에 명시적으로 타입 지정
-const inputSchema = z.object({
+export const inputSchema = z.object({
   name: z.string(),
   date: z.string().transform((str) => new Date(str)),
   description: z.string().optional(),
   logPath: z.string().optional(),
   videoPaths: z.array(z.string()).optional(),
   trackingPaths: z.array(z.string()).optional(),
+  cameraFov: z.number().optional(),
 });
+
+export type InputSchema = z.infer<typeof inputSchema>;
 
 function parsePathList(value: string): string[] {
   return value.split(",").map((p) => p.trim());
@@ -94,7 +97,7 @@ export const processFlightCommand = new Command("process-flight")
       const prisma = new PrismaClient();
       try {
         console.log("데이터 처리 시작...");
-        const result = await processFlightData(prisma, input as any);
+        const result = await processFlightData(prisma, input);
         console.log("\n=== 처리 완료 ===");
         console.log(`Flight ID: ${result.id}`);
         console.log(`이름: ${result.name}`);

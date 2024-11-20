@@ -37,3 +37,19 @@ export interface TrackedObject {
   confidence: number;
   classId: number;
 }
+
+export interface GeoPoint {
+  latitude: number;
+  longitude: number;
+}
+
+export interface ObjectMetrics {
+  pixelSpeed: number; // pixels per second
+  groundSpeed: number; // meters per second
+  location: GeoPoint; // estimated GPS location
+  courseHeading: number; // degrees from north
+}
+
+export interface ObjectWithMetrics extends TrackedObject {
+  metrics?: ObjectMetrics;
+}

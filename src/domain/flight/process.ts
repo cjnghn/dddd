@@ -1,6 +1,7 @@
 // src/domain/flight/process.ts
+import fs from "node:fs/promises";
+import path from "node:path";
 import type { PrismaClient } from "@prisma/client";
-import * as fs from "node:fs/promises";
 import { parseFlightLog, parseTrackingData } from "./parsers";
 import { createFlight } from "./db/flight";
 import { createTelemetryEntries } from "./db/telemetry";
@@ -8,18 +9,14 @@ import { saveTrackingResults } from "./db/tracking";
 import { createVideo } from "./db/video";
 import type { FlightLogEntry, VideoSegment } from "./types";
 import { findVideoSegments, mapVideosToSegments } from "./analysis/segment";
+import type { InputSchema } from "../../scripts/commands/process-flight";
 
 export async function processFlightData(
   prisma: PrismaClient,
-  input: {
-    name: string;
-    date: Date;
-    description?: string;
-    logPath?: string;
-    videoPaths?: string[];
-    trackingPaths?: string[];
-  }
+  input: InputSchema
 ) {
+  const cameraFov = input.cameraFov;
+
   // 1. Create flight record
   const flight = await createFlight(prisma, {
     name: input.name,
@@ -77,12 +74,20 @@ export async function processFlightData(
         segment.endIndex + 1
       );
 
+      // 메트릭 계산을 위해 비디오 메타데이터와 카메라 FOV 전달
       await saveTrackingResults(
         prisma,
         video.id,
         results,
         segmentTelemetry,
-        metadata.fps
+        metadata, // 비디오 메타데이터 추가
+        metadata.fps,
+        cameraFov // 카메라 FOV 추가
+      );
+
+      console.log(
+        `비디오 ${i + 1}/${input.videoPaths.length} 처리 완료 ` +
+          `(${path.basename(videoPath)})`
       );
     }
   }

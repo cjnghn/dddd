@@ -54,15 +54,23 @@ model Frame {
 }
 
 model Object {
-  id        Int      @id @default(autoincrement())
-  frame     Frame    @relation(fields: [frameId], references: [id])
-  frameId   Int
-  video     Video    @relation(fields: [videoId], references: [id])
-  videoId   Int
-  tid       Int // tracking ID
-  bbox      String // JSON string of [x1, y1, x2, y2]
-  conf      Float // confidence score
-  cid       Int // class ID
+  id      Int    @id @default(autoincrement())
+  frame   Frame  @relation(fields: [frameId], references: [id])
+  frameId Int
+  video   Video  @relation(fields: [videoId], references: [id])
+  videoId Int
+  tid     Int // tracking ID
+  bbox    String // JSON string of [x1, y1, x2, y2]
+  conf    Float // confidence score
+  cid     Int // class ID
+
+  // Optional telemetry data
+  pixelSpeed    Float? // pixels per second
+  groundSpeed   Float? // meters per second
+  latitude      Float? // estimated GPS latitude
+  longitude     Float? // estimated GPS longitude
+  courseHeading Float? // degrees from north
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
