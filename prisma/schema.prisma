@@ -1,0 +1,86 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Flight {
+  id          Int         @id @default(autoincrement())
+  name        String
+  date        DateTime
+  description String?
+  flightLog   String
+  videos      Video[]
+  telemetry   Telemetry[]
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+model Video {
+  id          Int      @id @default(autoincrement())
+  name        String
+  width       Int
+  height      Int
+  fps         Float
+  totalFrames Int
+  filePath    String
+  flight      Flight   @relation(fields: [flightId], references: [id])
+  flightId    Int
+  frames      Frame[]
+  objects     Object[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Frame {
+  id         Int      @id @default(autoincrement())
+  frameIndex Int
+  timestamp  DateTime
+  latitude   Float?
+  longitude  Float?
+  altitude   Float?
+  heading    Float?
+  video      Video    @relation(fields: [videoId], references: [id])
+  videoId    Int
+  objects    Object[]
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([videoId, frameIndex])
+}
+
+model Object {
+  id        Int      @id @default(autoincrement())
+  frame     Frame    @relation(fields: [frameId], references: [id])
+  frameId   Int
+  video     Video    @relation(fields: [videoId], references: [id])
+  videoId   Int
+  tid       Int // tracking ID
+  bbox      String // JSON string of [x1, y1, x2, y2]
+  conf      Float // confidence score
+  cid       Int // class ID
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([videoId, frameId])
+}
+
+model Telemetry {
+  id              Int      @id @default(autoincrement())
+  timeFromStartMS Int
+  latitude        Float
+  longitude       Float
+  altitude        Float // in meters
+  heading         Float // in degrees
+  isVideo         Boolean
+  flight          Flight   @relation(fields: [flightId], references: [id])
+  flightId        Int
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([flightId, timeFromStartMS])
+}
