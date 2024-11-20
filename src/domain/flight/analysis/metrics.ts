@@ -1,17 +1,12 @@
 // src/domain/flight/analysis/metrics.ts
+import { CONSTANTS } from "../../../config/constants";
 import type {
   FlightLogEntry,
-  GeoPoint,
   ObjectMetrics,
   ObjectWithMetrics,
   VideoMetadata,
 } from "../types";
 
-const EARTH_RADIUS = 6371000; // meters
-
-/**
- * 두 프레임 간의 바운딩 박스 중심점 간 픽셀 거리를 계산합니다.
- */
 function calculatePixelDistance(
   bbox1: [number, number, number, number],
   bbox2: [number, number, number, number]
@@ -28,25 +23,17 @@ function calculatePixelDistance(
   return Math.sqrt((center2.x - center1.x) ** 2 + (center2.y - center1.y) ** 2);
 }
 
-/**
- * 카메라의 FOV를 기반으로 픽셀당 실제 거리를 계산합니다.
- */
 function calculateGroundResolution(
-  altitude: number, // meters
-  fovAngle: number, // degrees
-  imageWidth: number // pixels
+  altitude: number,
+  fovAngle: number,
+  imageWidth: number
 ): number {
-  // 고도에서의 FOV 너비 (meters)
   const groundWidth = 2 * altitude * Math.tan((fovAngle / 2) * (Math.PI / 180));
-  // 픽셀당 실제 거리 (meters/pixel)
   return groundWidth / imageWidth;
 }
 
-/**
- * 이미지 상의 위치를 실제 GPS 좌표로 변환합니다.
- */
 function calculateGeoLocation(
-  droneLocation: GeoPoint,
+  droneLocation: { latitude: number; longitude: number },
   droneAltitude: number,
   droneHeading: number,
   fovAngle: number,
@@ -54,19 +41,16 @@ function calculateGeoLocation(
   imageHeight: number,
   pixelX: number,
   pixelY: number
-): GeoPoint {
-  // 이미지 중심으로부터의 상대적 위치 계산
+): { latitude: number; longitude: number } {
   const centerX = imageWidth / 2;
   const centerY = imageHeight / 2;
   const deltaX = pixelX - centerX;
-  const deltaY = centerY - pixelY; // y축은 위아래가 반전됨
+  const deltaY = centerY - pixelY;
 
-  // 픽셀 위치를 각도로 변환
   const pixelAngleX = (deltaX / imageWidth) * fovAngle;
   const pixelAngleY =
     (deltaY / imageHeight) * (fovAngle * (imageHeight / imageWidth));
 
-  // 드론 위치로부터의 거리 계산
   const distance =
     droneAltitude *
     Math.sqrt(
@@ -74,15 +58,13 @@ function calculateGeoLocation(
         Math.tan(pixelAngleY * (Math.PI / 180)) ** 2
     );
 
-  // 방향 각도 계산 (드론의 헤딩 고려)
   const bearing =
     (droneHeading + Math.atan2(deltaX, deltaY) * (180 / Math.PI) + 360) % 360;
 
-  // Haversine 공식을 사용하여 새로운 좌표 계산
-  const bearingRad = bearing * (Math.PI / 180);
   const lat1 = droneLocation.latitude * (Math.PI / 180);
   const lon1 = droneLocation.longitude * (Math.PI / 180);
-  const angularDistance = distance / EARTH_RADIUS;
+  const angularDistance = distance / CONSTANTS.EARTH_RADIUS;
+  const bearingRad = bearing * (Math.PI / 180);
 
   const lat2 = Math.asin(
     Math.sin(lat1) * Math.cos(angularDistance) +
@@ -102,16 +84,13 @@ function calculateGeoLocation(
   };
 }
 
-/**
- * 두 프레임 사이의 객체 메트릭을 계산합니다.
- */
 export function calculateObjectMetrics(
   prevObject: ObjectWithMetrics | null,
   currentObject: ObjectWithMetrics,
-  timeDelta: number, // seconds
+  timeDelta: number,
   droneData: FlightLogEntry,
   videoMeta: VideoMetadata,
-  cameraFov: number // degrees
+  cameraFov: number
 ): ObjectMetrics {
   // 픽셀 속도 계산
   const pixelSpeed = prevObject
@@ -121,7 +100,7 @@ export function calculateObjectMetrics(
       ) / timeDelta
     : 0;
 
-  // 실제 거리 속도 계산
+  // 지상 속도 계산
   const groundResolution = calculateGroundResolution(
     droneData.altitude,
     cameraFov,
@@ -129,7 +108,7 @@ export function calculateObjectMetrics(
   );
   const groundSpeed = pixelSpeed * groundResolution;
 
-  // 객체의 이미지 상 위치 계산
+  // 객체의 중심점 계산
   const centerX =
     (currentObject.boundingBox[0] + currentObject.boundingBox[2]) / 2;
   const centerY =
@@ -167,7 +146,6 @@ export function calculateObjectMetrics(
       (prevObject.boundingBox[1] + prevObject.boundingBox[3]) / 2
     );
 
-    // 두 GPS 좌표 간의 방향 계산
     const deltaLon = location.longitude - prevLocation.longitude;
     const y =
       Math.sin(deltaLon * (Math.PI / 180)) *
