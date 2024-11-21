@@ -1,0 +1,6 @@
+- 도메인 모델
+  - TelemetryEntry: 기본 데이터 구조
+  - TelemetrySegment: 연속된 텔레메트리 구간
+- 서비스 계층
+  - TelemetryParser: CSV 파싱 및 검증
+  - TelemetryInterpolator: 시점 기반 데이터 보간

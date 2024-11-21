@@ -1,0 +1,698 @@
+2024-11-21T02:52:43.976Z [ERROR]: Telemetry interpolation failed
+{
+  "error": {}
+}
+2024-11-21T02:52:44.166Z [ERROR]: Telemetry interpolation failed
+{
+  "error": {}
+}
+2024-11-21T02:52:53.251Z [ERROR]: Telemetry interpolation failed
+{
+  "error": {}
+}
+2024-11-21T03:21:04.138Z [ERROR]: Failed to match segments with videos
+{
+  "error": {}
+}
+2024-11-21T03:21:08.924Z [ERROR]: Failed to match segments with videos
+{
+  "error": {}
+}
+2024-11-21T03:25:16.835Z [ERROR]: Telemetry interpolation failed
+{
+  "error": {}
+}
+2024-11-21T03:25:16.848Z [ERROR]: Failed to match segments with videos
+{
+  "error": {}
+}
+2024-11-21T03:36:28.899Z [ERROR]: Failed to parse tracking file
+{
+  "error": {}
+}
+2024-11-21T03:37:03.573Z [ERROR]: Failed to parse tracking file
+{
+  "error": {}
+}
+2024-11-21T03:37:07.195Z [ERROR]: Failed to parse tracking file
+{
+  "error": {}
+}
+2024-11-21T03:37:38.908Z [ERROR]: Failed to parse tracking file
+{
+  "error": {}
+}
+2024-11-21T03:37:53.973Z [ERROR]: Failed to parse tracking file
+{
+  "error": {}
+}
+2024-11-21T03:38:04.966Z [ERROR]: Failed to parse tracking file
+{
+  "error": {}
+}
+2024-11-21T04:09:54.134Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:09:54.137Z [ERROR]: Data validation failed
+{
+  "error": {}
+}
+2024-11-21T04:09:54.393Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:09:54.395Z [ERROR]: Data validation failed
+{
+  "error": {}
+}
+2024-11-21T04:10:25.632Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:10:25.634Z [ERROR]: Data validation failed
+{
+  "error": {}
+}
+2024-11-21T04:10:51.869Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:10:51.871Z [ERROR]: Data validation failed
+{
+  "error": {}
+}
+2024-11-21T04:11:24.259Z [ERROR]: Unexpected error during telemetry parsing
+{
+  "error": {}
+}
+2024-11-21T04:11:24.263Z [ERROR]: Unexpected error during telemetry parsing
+{
+  "error": {}
+}
+2024-11-21T04:11:24.265Z [ERROR]: Unexpected error during telemetry parsing
+{
+  "error": {}
+}
+2024-11-21T04:11:24.267Z [ERROR]: Unexpected error during telemetry parsing
+{
+  "error": {}
+}
+2024-11-21T04:11:24.268Z [ERROR]: Unexpected error during telemetry parsing
+{
+  "error": {}
+}
+2024-11-21T04:11:24.269Z [ERROR]: Unexpected error during telemetry parsing
+{
+  "error": {}
+}
+2024-11-21T04:11:24.270Z [ERROR]: Unexpected error during telemetry parsing
+{
+  "error": {}
+}
+2024-11-21T04:11:24.271Z [ERROR]: Unexpected error during telemetry parsing
+{
+  "error": {}
+}
+2024-11-21T04:11:24.272Z [ERROR]: Unexpected error during telemetry parsing
+{
+  "error": {}
+}
+2024-11-21T04:11:38.957Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:11:38.959Z [ERROR]: Data validation failed
+{
+  "error": {}
+}
+2024-11-21T04:12:52.173Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Expected number, received nan"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:12:52.174Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "latitude"
+        ],
+        "message": "Expected number, received nan"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:12:52.175Z [ERROR]: Data validation failed
+{
+  "error": {}
+}
+2024-11-21T04:12:53.288Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Expected number, received nan"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:12:53.289Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "latitude"
+        ],
+        "message": "Expected number, received nan"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:12:53.289Z [ERROR]: Data validation failed
+{
+  "error": {}
+}
+2024-11-21T04:14:30.304Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Expected number, received nan"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:14:30.305Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "latitude"
+        ],
+        "message": "Expected number, received nan"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:14:30.306Z [ERROR]: Data validation failed
+{
+  "error": {}
+}
+2024-11-21T04:14:30.596Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Expected number, received nan"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:14:30.597Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "latitude"
+        ],
+        "message": "Expected number, received nan"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:14:30.598Z [ERROR]: Data validation failed
+{
+  "error": {}
+}
+2024-11-21T04:14:55.095Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Expected number, received nan"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:14:55.096Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "latitude"
+        ],
+        "message": "Expected number, received nan"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:14:55.097Z [ERROR]: Data validation failed
+{
+  "error": {}
+}

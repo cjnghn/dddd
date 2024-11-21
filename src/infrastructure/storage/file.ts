@@ -1,35 +1,35 @@
 // src/infrastructure/storage/file.ts
-import fs from "node:fs/promises";
-import path from "node:path";
-import { logger } from "../../config/logger";
-import { CONSTANTS } from "../../config/constants";
+import fs from "fs/promises";
+import path from "path";
+
+import { CONSTANTS } from "../../common/constants";
+import { logger } from "../logging/logger";
 
 export async function ensureUploadDirectories() {
   try {
-    for (const dir of Object.values(CONSTANTS.UPLOAD_DIRS)) {
+    for (const dir of Object.values(CONSTANTS.PATHS.UPLOADS)) {
       await fs.mkdir(dir, { recursive: true });
+      logger.debug(`Created directory: ${dir}`);
     }
-    logger.info("Upload directories created successfully");
   } catch (error) {
     logger.error("Failed to create upload directories:", error);
     throw error;
   }
 }
 
-export async function saveUploadedFile(
+export async function saveFile(
   file: Express.Multer.File,
-  type: keyof typeof CONSTANTS.UPLOAD_DIRS
+  directory: string,
 ): Promise<string> {
-  const uploadDir = CONSTANTS.UPLOAD_DIRS[type];
   const fileName = `${Date.now()}-${file.originalname}`;
-  const filePath = path.join(uploadDir, fileName);
+  const filePath = path.join(directory, fileName);
 
   try {
     await fs.writeFile(filePath, file.buffer);
-    logger.info(`File saved successfully: ${filePath}`);
+    logger.debug(`Saved file: ${filePath}`);
     return filePath;
   } catch (error) {
-    logger.error(`Failed to save file ${fileName}:`, error);
+    logger.error(`Failed to save file: ${fileName}`, error);
     throw error;
   }
 }

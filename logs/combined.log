@@ -1,0 +1,1048 @@
+2024-11-21T02:52:43.976Z [ERROR]: Telemetry interpolation failed
+{
+  "error": {}
+}
+2024-11-21T02:52:44.166Z [ERROR]: Telemetry interpolation failed
+{
+  "error": {}
+}
+2024-11-21T02:52:53.251Z [ERROR]: Telemetry interpolation failed
+{
+  "error": {}
+}
+2024-11-21T03:21:04.138Z [ERROR]: Failed to match segments with videos
+{
+  "error": {}
+}
+2024-11-21T03:21:04.139Z [WARN]: Segment duration mismatch
+{
+  "segmentDuration": 20000,
+  "videoDuration": 10000,
+  "difference": 10000
+}
+2024-11-21T03:21:08.924Z [ERROR]: Failed to match segments with videos
+{
+  "error": {}
+}
+2024-11-21T03:21:08.925Z [WARN]: Segment duration mismatch
+{
+  "segmentDuration": 20000,
+  "videoDuration": 10000,
+  "difference": 10000
+}
+2024-11-21T03:24:16.421Z [INFO]: Frame data generation completed
+{
+  "frameCount": 30
+}
+2024-11-21T03:24:16.427Z [INFO]: Frame data generation completed
+{
+  "frameCount": 30
+}
+2024-11-21T03:24:55.219Z [INFO]: Frame data generation completed
+{
+  "frameCount": 30
+}
+2024-11-21T03:24:55.225Z [INFO]: Frame data generation completed
+{
+  "frameCount": 30
+}
+2024-11-21T03:25:12.752Z [INFO]: Frame data generation completed
+{
+  "frameCount": 30
+}
+2024-11-21T03:25:12.756Z [INFO]: Frame data generation completed
+{
+  "frameCount": 30
+}
+2024-11-21T03:25:12.756Z [INFO]: Frame data generation completed
+{
+  "frameCount": 30
+}
+2024-11-21T03:25:16.835Z [INFO]: Frame data generation completed
+{
+  "frameCount": 30
+}
+2024-11-21T03:25:16.835Z [ERROR]: Telemetry interpolation failed
+{
+  "error": {}
+}
+2024-11-21T03:25:16.841Z [INFO]: Frame data generation completed
+{
+  "frameCount": 30
+}
+2024-11-21T03:25:16.842Z [INFO]: Frame data generation completed
+{
+  "frameCount": 30
+}
+2024-11-21T03:25:16.848Z [ERROR]: Failed to match segments with videos
+{
+  "error": {}
+}
+2024-11-21T03:25:16.850Z [WARN]: Segment duration mismatch
+{
+  "segmentDuration": 20000,
+  "videoDuration": 10000,
+  "difference": 10000
+}
+2024-11-21T03:26:07.027Z [INFO]: Frame data generation completed
+{
+  "frameCount": 30
+}
+2024-11-21T03:26:07.029Z [INFO]: Frame data generation completed
+{
+  "frameCount": 30
+}
+2024-11-21T03:26:07.030Z [INFO]: Frame data generation completed
+{
+  "frameCount": 30
+}
+2024-11-21T03:36:28.899Z [ERROR]: Failed to parse tracking file
+{
+  "error": {}
+}
+2024-11-21T03:37:03.573Z [ERROR]: Failed to parse tracking file
+{
+  "error": {}
+}
+2024-11-21T03:37:07.195Z [ERROR]: Failed to parse tracking file
+{
+  "error": {}
+}
+2024-11-21T03:37:38.908Z [ERROR]: Failed to parse tracking file
+{
+  "error": {}
+}
+2024-11-21T03:37:53.973Z [ERROR]: Failed to parse tracking file
+{
+  "error": {}
+}
+2024-11-21T03:38:04.966Z [ERROR]: Failed to parse tracking file
+{
+  "error": {}
+}
+2024-11-21T04:09:54.126Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 3,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.400Z"
+  }
+}
+2024-11-21T04:09:54.129Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}
+2024-11-21T04:09:54.134Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:09:54.135Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 1,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.000Z"
+  }
+}
+2024-11-21T04:09:54.137Z [ERROR]: Data validation failed
+{
+  "error": {}
+}
+2024-11-21T04:09:54.141Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}
+2024-11-21T04:09:54.385Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 3,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.400Z"
+  }
+}
+2024-11-21T04:09:54.388Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}
+2024-11-21T04:09:54.393Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:09:54.394Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 1,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.000Z"
+  }
+}
+2024-11-21T04:09:54.395Z [ERROR]: Data validation failed
+{
+  "error": {}
+}
+2024-11-21T04:09:54.397Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}
+2024-11-21T04:10:25.625Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 3,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.400Z"
+  }
+}
+2024-11-21T04:10:25.627Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}
+2024-11-21T04:10:25.632Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:10:25.633Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 1,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.000Z"
+  }
+}
+2024-11-21T04:10:25.634Z [ERROR]: Data validation failed
+{
+  "error": {}
+}
+2024-11-21T04:10:25.635Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}
+2024-11-21T04:10:51.863Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 3,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.400Z"
+  }
+}
+2024-11-21T04:10:51.865Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}
+2024-11-21T04:10:51.869Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:10:51.870Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 1,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.000Z"
+  }
+}
+2024-11-21T04:10:51.871Z [ERROR]: Data validation failed
+{
+  "error": {}
+}
+2024-11-21T04:10:51.873Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}
+2024-11-21T04:11:24.259Z [ERROR]: Unexpected error during telemetry parsing
+{
+  "error": {}
+}
+2024-11-21T04:11:24.263Z [ERROR]: Unexpected error during telemetry parsing
+{
+  "error": {}
+}
+2024-11-21T04:11:24.265Z [ERROR]: Unexpected error during telemetry parsing
+{
+  "error": {}
+}
+2024-11-21T04:11:24.267Z [ERROR]: Unexpected error during telemetry parsing
+{
+  "error": {}
+}
+2024-11-21T04:11:24.268Z [ERROR]: Unexpected error during telemetry parsing
+{
+  "error": {}
+}
+2024-11-21T04:11:24.269Z [ERROR]: Unexpected error during telemetry parsing
+{
+  "error": {}
+}
+2024-11-21T04:11:24.270Z [ERROR]: Unexpected error during telemetry parsing
+{
+  "error": {}
+}
+2024-11-21T04:11:24.271Z [ERROR]: Unexpected error during telemetry parsing
+{
+  "error": {}
+}
+2024-11-21T04:11:24.272Z [ERROR]: Unexpected error during telemetry parsing
+{
+  "error": {}
+}
+2024-11-21T04:11:38.950Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 3,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.400Z"
+  }
+}
+2024-11-21T04:11:38.953Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}
+2024-11-21T04:11:38.957Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:11:38.958Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 1,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.000Z"
+  }
+}
+2024-11-21T04:11:38.959Z [ERROR]: Data validation failed
+{
+  "error": {}
+}
+2024-11-21T04:11:38.961Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}
+2024-11-21T04:12:52.167Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 3,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.400Z"
+  }
+}
+2024-11-21T04:12:52.169Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}
+2024-11-21T04:12:52.173Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Expected number, received nan"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:12:52.174Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "latitude"
+        ],
+        "message": "Expected number, received nan"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:12:52.175Z [ERROR]: Data validation failed
+{
+  "error": {}
+}
+2024-11-21T04:12:52.176Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}
+2024-11-21T04:12:53.281Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 3,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.400Z"
+  }
+}
+2024-11-21T04:12:53.283Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}
+2024-11-21T04:12:53.288Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Expected number, received nan"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:12:53.289Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "latitude"
+        ],
+        "message": "Expected number, received nan"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:12:53.289Z [ERROR]: Data validation failed
+{
+  "error": {}
+}
+2024-11-21T04:12:53.291Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}
+2024-11-21T04:14:30.299Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 3,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.400Z"
+  }
+}
+2024-11-21T04:14:30.302Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}
+2024-11-21T04:14:30.304Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Expected number, received nan"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:14:30.305Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "latitude"
+        ],
+        "message": "Expected number, received nan"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:14:30.306Z [ERROR]: Data validation failed
+{
+  "error": {}
+}
+2024-11-21T04:14:30.307Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}
+2024-11-21T04:14:30.593Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 3,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.400Z"
+  }
+}
+2024-11-21T04:14:30.595Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}
+2024-11-21T04:14:30.596Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Expected number, received nan"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:14:30.597Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "latitude"
+        ],
+        "message": "Expected number, received nan"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:14:30.598Z [ERROR]: Data validation failed
+{
+  "error": {}
+}
+2024-11-21T04:14:30.599Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}
+2024-11-21T04:14:55.092Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 3,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.400Z"
+  }
+}
+2024-11-21T04:14:55.094Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}
+2024-11-21T04:14:55.095Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "datetime(utc)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "ascent(feet)"
+        ],
+        "message": "Required"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "compass_heading(degrees)"
+        ],
+        "message": "Expected number, received nan"
+      },
+      {
+        "code": "invalid_type",
+        "expected": "string",
+        "received": "undefined",
+        "path": [
+          0,
+          "isVideo"
+        ],
+        "message": "Required"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:14:55.096Z [ERROR]: Data validation failed
+{
+  "error": {
+    "issues": [
+      {
+        "code": "invalid_type",
+        "expected": "number",
+        "received": "nan",
+        "path": [
+          0,
+          "latitude"
+        ],
+        "message": "Expected number, received nan"
+      }
+    ],
+    "name": "ZodError"
+  }
+}
+2024-11-21T04:14:55.097Z [ERROR]: Data validation failed
+{
+  "error": {}
+}
+2024-11-21T04:14:55.098Z [INFO]: Telemetry data parsed successfully
+{
+  "entryCount": 2,
+  "timeRange": {
+    "start": "2024-09-11T05:47:13.000Z",
+    "end": "2024-09-11T05:47:13.200Z"
+  }
+}

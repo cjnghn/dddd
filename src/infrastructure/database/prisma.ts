@@ -1,6 +1,7 @@
 // src/infrastructure/database/prisma.ts
 import { PrismaClient } from "@prisma/client";
-import { logger } from "../../config/logger";
+
+import { logger } from "../logging/logger";
 
 export function createPrismaClient() {
   const prisma = new PrismaClient({
@@ -13,19 +14,19 @@ export function createPrismaClient() {
   });
 
   prisma.$on("error", (e) => {
-    logger.error("Prisma Error:", e);
+    logger.error("Database Error:", e);
   });
 
   prisma.$on("warn", (e) => {
-    logger.warn("Prisma Warning:", e);
+    logger.warn("Database Warning:", e);
   });
 
   prisma.$on("info", (e) => {
-    logger.info("Prisma Info:", e);
+    logger.info("Database Info:", e);
   });
 
   prisma.$on("query", (e) => {
-    logger.debug("Prisma Query:", {
+    logger.debug("Database Query:", {
       query: e.query,
       params: e.params,
       duration: e.duration,

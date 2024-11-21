@@ -13,11 +13,28 @@ model Flight {
   name        String
   date        DateTime
   description String?
-  flightLog   String
-  videos      Video[]
+  logPath     String? // 로그 파일 경로
   telemetry   Telemetry[]
+  videos      Video[]
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
+}
+
+model Telemetry {
+  id            Int      @id @default(autoincrement())
+  timeFromStart Int // milliseconds
+  timestamp     DateTime // UTC
+  latitude      Float
+  longitude     Float
+  altitude      Float // meters
+  heading       Float // degrees
+  isVideo       Boolean // 비디오 촬영 여부
+  flight        Flight   @relation(fields: [flightId], references: [id], onDelete: Cascade)
+  flightId      Int
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([flightId, timeFromStart])
 }
 
 model Video {
@@ -27,68 +44,53 @@ model Video {
   height      Int
   fps         Float
   totalFrames Int
-  filePath    String
-  flight      Flight   @relation(fields: [flightId], references: [id])
+  filePath    String // 비디오 파일 경로
+  flight      Flight   @relation(fields: [flightId], references: [id], onDelete: Cascade)
   flightId    Int
   frames      Frame[]
   objects     Object[]
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+
+  @@index([flightId])
 }
 
 model Frame {
   id         Int      @id @default(autoincrement())
   frameIndex Int
-  timestamp  DateTime
+  timestamp  DateTime // UTC
   latitude   Float?
   longitude  Float?
-  altitude   Float?
-  heading    Float?
-  video      Video    @relation(fields: [videoId], references: [id])
+  altitude   Float? // meters
+  heading    Float? // degrees
+  video      Video    @relation(fields: [videoId], references: [id], onDelete: Cascade)
   videoId    Int
   objects    Object[]
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 
   @@unique([videoId, frameIndex])
+  @@index([videoId, frameIndex])
 }
 
 model Object {
-  id      Int    @id @default(autoincrement())
-  frame   Frame  @relation(fields: [frameId], references: [id])
-  frameId Int
-  video   Video  @relation(fields: [videoId], references: [id])
-  videoId Int
-  tid     Int // tracking ID
-  bbox    String // JSON string of [x1, y1, x2, y2]
-  conf    Float // confidence score
-  cid     Int // class ID
-
-  // Optional telemetry data
+  id            Int      @id @default(autoincrement())
+  video         Video    @relation(fields: [videoId], references: [id], onDelete: Cascade)
+  videoId       Int
+  frame         Frame    @relation(fields: [frameId], references: [id], onDelete: Cascade)
+  frameId       Int
+  trackingId    Int // tracking ID 객체의 고유 식별자
+  bbox          String // [x1, y1, x2, y2] JSON string
+  confidence    Float // 객체 검출 신뢰도
+  classId       Int // 객체 클래스 ID
   pixelSpeed    Float? // pixels per second
   groundSpeed   Float? // meters per second
-  latitude      Float? // estimated GPS latitude
-  longitude     Float? // estimated GPS longitude
+  latitude      Float? // 객체의 추정 위도
+  longitude     Float? // 객체의 추정 경도
   courseHeading Float? // degrees from north
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
 
   @@index([videoId, frameId])
-}
-
-model Telemetry {
-  id              Int      @id @default(autoincrement())
-  timeFromStartMS Int
-  latitude        Float
-  longitude       Float
-  altitude        Float // in meters
-  heading         Float // in degrees
-  isVideo         Boolean
-  flight          Flight   @relation(fields: [flightId], references: [id])
-  flightId        Int
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
-
-  @@index([flightId, timeFromStartMS])
+  @@index([trackingId])
 }
